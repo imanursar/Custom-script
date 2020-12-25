@@ -1,0 +1,56 @@
+ursar.py
+
+setting
+	pandas_setting
+	# default setting for jupyter notebook
+
+fe
+	filling_nan
+		(type == "cat")  and (type_rand =="random") # category obj with random select
+		(type == "cat")  and (type_rand =="zero")   # category obj with zero choose
+		(type == "cat")  and (type_rand =="rep_0/1")# category obj with flag for nan
+		(type == "cat")  and (type_rand =="flag")   # category obj with flag for nan and new column
+		(type == "num") and (type_rand =="random")  # numerical obj with random select
+		(type == "num") and (type_rand =="normal")  # numerical obj with normal distribution
+		(type == "num") and (type_rand =="interpolate")# numerical obj with interpolation
+		(type == "num") and (type_rand =="def")     # numerical obj with own def (normal)
+		(type == "num") and (type_rand =="mean")    # numerical obj with mean value
+		(type == "num") and (type_rand =="mode")    # numerical obj with mode value
+		(type == "num") and (type_rand =="median")    # numerical obj with median value
+		
+		# next modul 
+		# Model-based imputation (train without missing data and test it with missing data)
+		# Multiple imputation (?)
+
+	mapping
+	# mapping unique value from select column with list key_value
+	
+	inv_mapping
+	# invert mapping from mapping result
+	
+	pivot 
+	#pivot table from pandas
+	# specified value from given index for key_value
+		(type_rand =="mean")     # aggfunc=np.mean
+		(type_rand =="median")   # aggfunc=np.median
+		(type_rand =="mode")     # aggfunc=stats.mode
+		
+	binning
+	# binning value with deffine range 
+	
+	cut
+	# binning value
+		cut
+		# equal sections
+		qcut
+		# equal number of data point in each bin
+
+	date_time
+	# change string to timestamp
+	
+	duration
+	# calculating duration from given time
+	(time=="today") # duration from today calculation
+	else            # duration from specific time
+	
+	
